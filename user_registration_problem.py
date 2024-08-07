@@ -55,7 +55,8 @@ def valid_password_r1(password):
         Parameters : password - It is a string 
         Return : 'Valid password' if the name is valid, else 'Invalid password'
     '''
-    pattern = r'^[a-zA-Z]{8,}$'
+    # rule_1 pattern = r'^[a-zA-Z]{8,}$'
+    pattern = r'^(?=.*[A-Z])[a-zA-Z]{8,}$'
     if re.match(pattern, password):
         return "Valid password"
     else:
