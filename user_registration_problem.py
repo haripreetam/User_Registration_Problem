@@ -50,12 +50,26 @@ def valid_mobile_number(mobile_number):
     else:
         return "Invalid mobile number"
     
+def valid_password_r1(password):
+    '''Description : To validate the password using regex pattern.
+        Parameters : password - It is a string 
+        Return : 'Valid password' if the name is valid, else 'Invalid password'
+    '''
+    pattern = r'^[a-zA-Z]{8,}$'
+    if re.match(pattern, password):
+        return "Valid password"
+    else:
+        return "Invalid password"
     
+ 
 first_name = input("Enter first name: ")
 last_name = input("Enter last name: ")
 email = input("Enter email: ")
 mobile_number = input("Enter mobile number: ")
+password = input("Enter the password")
+
 print(valid_first_name(first_name))
 print(valid_last_name(last_name))
 print(valid_email(email))
 print(valid_mobile_number(mobile_number))
+print(valid_password_r1(password))
