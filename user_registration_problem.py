@@ -57,7 +57,8 @@ def valid_password_r1(password):
     '''
     # rule_1 pattern = r'^[a-zA-Z]{8,}$'
     # rule_2 pattern = r'^(?=.*[A-Z])[a-zA-Z]{8,}$'
-    pattern = r'^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$'
+    # rule_3 pattern = r'^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$'
+    pattern = r'^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+={}\[\]:;"\'<>,.?/\\|-])[a-zA-Z\d!@#$%^&*()_+={}\[\]:;"\'<>,.?/\\|-]{8,}$'
     if re.match(pattern, password):
         return "Valid password"
     else:
