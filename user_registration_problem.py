@@ -37,3 +37,25 @@ def valid_email(email):
         return "Valid email"
     else:
         return "Invalid email"
+    
+
+def valid_mobile_number(mobile_number):
+    '''Description : To validate the mobile number using regex pattern.
+        Parameters : mobile_number - It is a sequence of intergers
+        Return : 'Valid mobile number' if the name is valid, else 'Invalid mobile number'
+    '''
+    pattern = r'^[0-9]{2}\s[0-9]{10}$'
+    if re.match(pattern, mobile_number):
+        return "Valid mobile number"
+    else:
+        return "Invalid mobile number"
+    
+    
+first_name = input("Enter first name: ")
+last_name = input("Enter last name: ")
+email = input("Enter email: ")
+mobile_number = input("Enter mobile number: ")
+print(valid_first_name(first_name))
+print(valid_last_name(last_name))
+print(valid_email(email))
+print(valid_mobile_number(mobile_number))
